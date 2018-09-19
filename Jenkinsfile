@@ -7,7 +7,7 @@ pipeline {
 
     parameters {
          string(name: 'tomcat_dev', defaultValue: '54.172.234.50', description: 'Staging Server')
-         string(name: 'tomcat_prod', defaultValue: '34.207.178.87', description: 'Production Server')
+         string(name: 'tomcat_prod', defaultValue: '35.153.68.237', description: 'Production Server')
     }
 
     triggers {
@@ -17,7 +17,7 @@ pipeline {
 stages{
         stage('Build'){
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
             post {
                 success {
